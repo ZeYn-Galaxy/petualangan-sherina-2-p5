@@ -52,8 +52,8 @@ function App() {
   ]);
   return (
     <>
-      <div className="container overflow-x-hidden" id="home">
-        <Navbar />
+      <Navbar />
+      <div className="container overflow-x-hidden">
         <Sinopsis Thumbnail={Thumbnail} />
         <Tokoh data={pemeran} />
         <Dimensi />
