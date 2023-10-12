@@ -1,4 +1,4 @@
-export default function Tokoh(props) {
+export default function Tokoh({data}) {
     return (
         <>
             <div className="container" id="tokoh">
@@ -12,26 +12,15 @@ export default function Tokoh(props) {
                     <div className="col-12 col-md-6">
                         <div id="carouselExampleDark" className="carousel carousel-dark slide">
                             <div className="carousel-inner">
-                                {props.data.map((tokoh, index) => (
+                                {data.map((tokoh, index) => (
                                     <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                                         <div className="card">
                                             <img src={tokoh.Image} style={{ height: '300px' }} className="card-img-top" alt="..." />
                                             <div className="card-body">
-                                                {/* <!-- Nama --> */}
                                                 <div className="d-flex flex-column">
                                                     <span className="fs-5 fw-bold">{tokoh.Pemeran}</span>
                                                     <span className="fs-6 text-secondary">{tokoh.Nama}</span>
                                                 </div>
-                                                {/* <!-- Collapse --> */}
-                                                {/* <a className="btn btn-primary w-100 my-2" data-bs-toggle="collapse" href={"#collapseTokoh" + index}
-                                                role="button" aria-expanded="false" aria-controls={"collapseTokoh" + index}>
-                                                Deskripsi Singkat...
-                                            </a>
-                                            <div className="collapse" id={"collapseTokoh" + index}>
-                                                <p>
-                                                    {tokoh.Deskripsi}
-                                                </p>
-                                            </div> */}
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +41,7 @@ export default function Tokoh(props) {
                 </div>
                 {/* DESKTOP */}
                 <div className="row d-none d-lg-flex">
-                    {props.data.map((tokoh, index) => (
+                    {data.map((tokoh, index) => (
                         <div key={index} className="col-12 col-lg-3 col-md-4 d-flex justify-content-center mt-3">
                             <div className="card" style={{ width: '18rem' }}>
                                 <img src={tokoh.Image} style={{ height: '325px' }} className="card-img-top" alt="..." />
@@ -61,14 +50,6 @@ export default function Tokoh(props) {
                                         <span className="fs-5 fw-bold">{tokoh.Pemeran}</span>
                                         <span className="fs-6 text-secondary">{tokoh.Nama}</span>
                                     </div>
-                                    {/* <a className="btn btn-primary w-100" data-bs-toggle="collapse" href={"#collapseTokoh" + index} role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Deskripsi Singkat...
-                                    </a>
-                                    <div className="collapse" id={"collapseTokoh" + index}>
-                                        <p>
-                                            {tokoh.Deskripsi}
-                                        </p>
-                                    </div> */}
                                 </div>
                             </div>
                         </div>

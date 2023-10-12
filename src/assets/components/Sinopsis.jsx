@@ -1,4 +1,4 @@
-export default function Sinopsis(props) {
+export default function Sinopsis({Thumbnail}) {
     return (
         <>
             <div className="container">
@@ -81,7 +81,7 @@ export default function Sinopsis(props) {
                         </p>
                     </div>
                     <div className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end animate__animated animate__fadeInRight">
-                        <img className="img-fluid rounded-3" src={props.Thumbnail} alt="image tidak load" />
+                        <img className="img-fluid rounded-3" src={Thumbnail} alt="image tidak load" />
                     </div>
                 </div>
             </div>
