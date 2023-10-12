@@ -11,11 +11,11 @@ export default function Tokoh({data}) {
                 <div className="row d-flex d-lg-none justify-content-center">
                     <div className="col-12 col-md-6">
                         <div id="carouselExampleDark" className="carousel carousel-dark slide">
-                            <div className="carousel-inner">
+                            <div className="carousel-inner rounded-3">
                                 {data.map(({Image, Pemeran, Nama}, index) => (
                                     <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                                        <div className="card">
-                                            <img src={Image} style={{ height: '300px' }} className="card-img-top" alt="..." />
+                                        <div className="card rounded-3">
+                                            <img src={Image} style={{ height: '350px' }} className="object-fit-cover" alt="..." />
                                             <div className="card-body">
                                                 <div className="d-flex flex-column">
                                                     <span className="fs-5 fw-bold">{Pemeran}</span>
@@ -44,7 +44,7 @@ export default function Tokoh({data}) {
                     {data.map(({Image, Pemeran, Nama}, index) => (
                         <div key={index} className="col-12 col-lg-3 col-md-4 d-flex justify-content-center mt-3">
                             <div className="card" style={{ width: '18rem' }}>
-                                <img src={Image} style={{ height: '325px' }} className="card-img-top" alt="..." />
+                                <img src={Image} style={{ height: '325px' }} className="object-fit-cover card-img-top" alt="..." />
                                 <div className="card-body">
                                     <div className="d-flex flex-column">
                                         <span className="fs-5 fw-bold">{Pemeran}</span>
